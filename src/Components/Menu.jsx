@@ -1,18 +1,17 @@
-import React, { Suspense, useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import Cortina from './Cortina.jsx'
+import React, { Suspense, useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import Bad from "./Bad.jsx";
 
 const Menu = () => {
   return (
     <>
-      <Canvas camera={{ fov:75 , position: [0, 2, 5] }}>
+      <Canvas camera={{ fov: 75, position: [0, 2, 5] }}>
         <Suspense fallback={null}>
-            <Cortina />
+          <Bad />
         </Suspense>
-          
-      </Canvas> 
+      </Canvas>
     </>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
